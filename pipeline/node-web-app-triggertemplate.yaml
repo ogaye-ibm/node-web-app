@@ -88,7 +88,7 @@ metadata:
   name: el-node-web-app
   namespace: node-web-project
 spec:
-  host: el-node-web-app.apps.cpat-poc-travelers-afb9c6047b062b44e3f1b3ecfeba4309-0000.cloud
+  host: el-node-web-app.cpat-poc-travelers-afb9c6047b062b44e3f1b3ecfeba4309-0000.cloud
     sjc03:
       containers:
         appdomain:
