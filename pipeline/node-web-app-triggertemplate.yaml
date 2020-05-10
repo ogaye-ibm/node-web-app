@@ -6,10 +6,11 @@ spec:
   params: 
   - name: git-repo-url
     default: master
+    description: git repo url
   - name: git-repo-name
-    - description: git repo name
+    description: git repo name
   - name: git-revision
-    - description: git revision
+    description: git revision
   resourcetemplates:
   - apiVersion: tekton.dev/v1alpha1
     kind: PipelineResource
