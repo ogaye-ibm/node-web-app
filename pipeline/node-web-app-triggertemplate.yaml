@@ -5,9 +5,9 @@ metadata:
 spec:
   params:
     - name: git-repo-url
-      default: master
     - name: git-repo-name
     - name: git-revision
+      default: master
   resourcetemplates:
   - apiVersion: tekton.dev/v1alpha1
     kind: PipelineResource
@@ -17,11 +17,11 @@ spec:
     spec:
       params:
       - name: url
-        value: $(params.gitrepourl)
+        value: $(params.git-repo-url)
       - name: revision
-        value: $(params.gitrevision)
+        value: $(params.git-revision)
       - name: git-repo-name
-        value: $(params.gitreponame)
+        value: $(params.git-repo-name)
       type: git
   - apiVersion: tekton.dev/v1alpha1
     kind: PipelineResource
