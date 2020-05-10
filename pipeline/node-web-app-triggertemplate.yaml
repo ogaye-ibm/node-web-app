@@ -3,11 +3,11 @@ kind: TriggerTemplate
 metadata:
   name: node-web-app-tt
 spec:
-  params:
-    - name: git-repo-url
-    - name: git-repo-name
-    - name: git-revision
-      default: master
+  params: 
+  - name: git-repo-url
+    default: master
+  - name: git-repo-name
+  - name: git-revision
   resourcetemplates:
   - apiVersion: tekton.dev/v1alpha1
     kind: PipelineResource
@@ -59,11 +59,11 @@ metadata:
   name: node-web-app-tb
 spec:
   params:
-  - name: gitrepourl
+  - name: git-repo-url
     value: $(body.repository.url)
-  - name: gitrevision
+  - name: git-revision
     value: $(body.head_commit.id)
-  - name: gitreponame
+  - name: git-repo-name
     value: $(body.repository.name)
 
 ---
@@ -89,10 +89,6 @@ metadata:
   namespace: node-web-project
 spec:
   host: el-node-web-app.cpat-poc-travelers-afb9c6047b062b44e3f1b3ecfeba4309-0000.cloud
-    sjc03:
-      containers:
-        appdomain:
-          cloud/:
   to:
     kind: Service
     name: el-node-web-app-el
