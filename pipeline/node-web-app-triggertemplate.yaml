@@ -6,8 +6,8 @@ metadata:
 spec:
   params: 
   - name: git-repo-url
-    description: any
-    default: testing
+      - description: any
+      - default: testing
   - name: git-revision
     description: The git revision
     default: master
