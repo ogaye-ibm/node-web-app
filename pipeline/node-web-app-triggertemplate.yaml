@@ -7,7 +7,6 @@ spec:
   params: 
   - name: gitrepourl
   - name: gitevision
-  - name: gitrepoame
   resourcetemplates:
   - apiVersion: tekton.dev/v1alpha1
     kind: PipelineResource
