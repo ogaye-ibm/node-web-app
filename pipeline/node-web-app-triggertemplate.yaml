@@ -5,8 +5,11 @@ metadata:
 spec:
   params: 
   - name: git-repo-url
-    default: master
+    description: any
+    default: testing
   - name: git-revision
+    description: The git revision
+    default: master
   - name: git-repo-name
   resourcetemplates:
   - apiVersion: tekton.dev/v1alpha1
