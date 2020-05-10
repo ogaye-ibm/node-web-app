@@ -1,12 +1,13 @@
----
 apiVersion: tekton.dev/v1alpha1
 kind: TriggerTemplate
 metadata:
   name: node-web-app-tt
 spec:
-  params: 
-  - name: gitrepourl
-  - name: gitevision
+  params:
+    - name: git-repo-url
+      default: master
+    - name: git-repo-name
+    - name: git-revision
   resourcetemplates:
   - apiVersion: tekton.dev/v1alpha1
     kind: PipelineResource
