@@ -5,13 +5,11 @@ metadata:
   name: node-web-app-tt
 spec:
   params: 
-  - name: git-repo-url
-      - description: any
-      - default: testing
-  - name: git-revision
+  - name: gitrepourl
+  - name: gitevision
     description: The git revision
     default: master
-  - name: git-repo-name
+  - name: gitrepoame
   resourcetemplates:
   - apiVersion: tekton.dev/v1alpha1
     kind: PipelineResource
@@ -21,11 +19,11 @@ spec:
     spec:
       params:
       - name: url
-        value: $(params.git-repo-url)
+        value: $(params.gitrepourl)
       - name: revision
-        value: $(params.git-revision)
+        value: $(params.gitrevision)
       - name: git-repo-name
-        value: $(params.git-repo-name)
+        value: $(params.gitreponame)
       type: git
   - apiVersion: tekton.dev/v1alpha1
     kind: PipelineResource
@@ -63,11 +61,11 @@ metadata:
   name: node-web-app-tb
 spec:
   params:
-  - name: git-repo-url
+  - name: gitrepourl
     value: $(body.repository.url)
-  - name: git-revision
+  - name: gitrevision
     value: $(body.head_commit.id)
-  - name: git-repo-name
+  - name: gitreponame
     value: $(body.repository.name)
 
 ---
