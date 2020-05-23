@@ -2,7 +2,7 @@ apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
   name: node-web-app-route
-  namespace: node-web-project
+  namespace: dev-og
 spec:
   host: node-web-app.apps.roly-ocp43-cluster.roly-ocp.com
   to:
